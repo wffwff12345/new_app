@@ -1,0 +1,38 @@
+<template>
+    <div id="app">
+      <router-view/>
+    </div>
+</template>
+<script>
+export default {
+  mounted () {
+    document.title = '欢迎登录冲浪网平台管理系统'
+  }
+}
+</script>
+<style lang="scss">
+@import '@/scss/element-variables.scss';
+
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $--color-text-primary;
+  font-size: $--font-size-base;
+}
+
+#nav {
+  padding: 30px;
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
+}
+
+.scrollbar > div {
+    overflow-x: hidden;
+}
+</style>
